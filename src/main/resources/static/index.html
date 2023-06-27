@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Inicio</title>
+  <meta name="description" content="">
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <base href="/">
+  <link rel='stylesheet' type='text/css' href='/webjars/bootstrap/css/bootstrap.min.css' />
+  <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/index.css">
+  <script type="text/javascript" src="js/index.js"></script>
+</head>
+
+<body>
+
+  <div class="contenedor p-4 d-grid">
+    <div class="card">
+      <div class="card-header">
+        <ul class="nav nav-pills nav-justified" id="pills-tab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="tab-login" data-bs-toggle="pill" data-bs-target="#pills-login"
+              type="button" role="tab" aria-controls="pills-login" aria-selected="true">Iniciar sesión</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="tab-register" data-bs-toggle="pill" data-bs-target="#pills-register"
+              type="button" role="tab" aria-controls="pills-register" aria-selected="false">Crear una cuenta</button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="tab-content">
+        <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
+          <form>
+            <div class="card-body">
+              <div class="form-outline mb-4">
+                <label class="form-label" for="loginName">Email</label>
+                <input type="email" id="loginName" class="form-control" />
+              </div>
+
+              <div class="form-outline mb-4">
+                <label class="form-label" for="loginPassword">Contraseña</label>
+                <input type="password" id="loginPassword" class="form-control" />
+              </div>
+              <p>¿No tienes cuenta? <a href="javascript:register()">Crea tu cuenta aquí</a> </p>
+            </div>
+
+            <div class="card-footer text-muted">
+              <button type="submit" class="btn btn-primary btn-block" style="width: 100%;"
+                onclick="getLogin()">Ingresar</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="tab-pane fade" id="pills-register" role="tabpanel" aria-labelledby="tab-register">
+          <form>
+            <div class="card-body">
+              <div class="form-outline mb-4">
+                <label class="form-label" for="registerName">Nombre</label>
+                <input type="text" id="registerName" class="form-control" />
+              </div>
+
+              <div class="form-outline mb-4">
+                <label class="form-label" for="registerEmail">Email</label>
+                <input type="email" id="registerEmail" class="form-control" />
+              </div>
+
+              <div class="form-outline mb-4">
+                <label class="form-label" for="registerPassword">Contraseña</label>
+                <input type="password" id="registerPassword" class="form-control" />
+              </div>
+
+              <div class="form-outline mb-4">
+                <label class="form-label" for="registerRepeatPassword">Confirmar contraseña</label>
+                <input type="password" id="registerRepeatPassword" class="form-control" />
+              </div>
+              <p>¿Ya tienes cuenta? <a href="javascript:login()">Inicia sesión aquí</a> </p>
+
+            </div>
+
+            <div class="card-footer text-muted">
+              <button type="submit" class="btn btn-primary btn-block" style="width: 100%;"
+                onclick="registerUser()">Registrar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

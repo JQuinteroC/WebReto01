@@ -1,0 +1,28 @@
+.contenedor {
+    width: 100%;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #9053c7;
+    background: -webkit-linear-gradient(245deg, #8550c8, #2f4ec0);
+    background: -o-linear-gradient(245deg, #8550c8, #2f4ec0);
+    background: -moz-linear-gradient(245deg, #8550c8, #2f4ec0);
+    background: linear-gradient(245deg, #8550c8, #2f4ec0);
+}
+
+p {
+    text-align: center;
+}
+
+@media (max-width: 380px) {
+    ul {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 381px) {
+    ul {
+        width: 320px;
+    }
+}
